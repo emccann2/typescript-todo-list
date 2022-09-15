@@ -1,5 +1,3 @@
-
-
 name: First Workflow
 
 on:
@@ -15,16 +13,16 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
-# Comment out until .nvmrc file exists
-#      - uses: actions/setup-node@v3
-#        with:
-#          node-version-file: typescript-todo-list/.nvmrc
-#          registry-url: 'https://repo.bazaarvoice.com/nexus/content/repositories/npm-all'
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version-file: typescript-todo-list/.nvmrc
+          registry-url: 'https://repo.bazaarvoice.com/nexus/content/repositories/npm-all'
           
-#      - name: Install NPM Dependencies
-#        working-directory: typescript-todo-list
-#        run: |
-#          npm ci
+      - name: Install NPM Dependencies
+        working-directory: typescript-todo-list
+        run: |
+          npm ci
       
       - name: Output
         shell: bash
