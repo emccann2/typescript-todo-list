@@ -25,7 +25,7 @@ jobs:
           
       - name: Run prettier
         run: |
-          npx prettier --write .
+          npm run format
       
       - name: Install Linting Dependencies and Lint
         run: |
@@ -36,6 +36,7 @@ jobs:
         run: |
           echo '### Build Summary :rocket:' >> $GITHUB_STEP_SUMMARY
           echo "|  |  |" >> $GITHUB_STEP_SUMMARY
+           echo "| ------ | ------ |" >> $GITHUB_STEP_SUMMARY
           echo "| **Branch Name**   |  ${{ github.head_ref }}                       |" >> $GITHUB_STEP_SUMMARY
           echo "| **Author**        |  ${{ github.triggering_actor	 }}             |" >> $GITHUB_STEP_SUMMARY
           echo "| **Event Name**    |  ${{ github.event_name }}                     |" >> $GITHUB_STEP_SUMMARY
