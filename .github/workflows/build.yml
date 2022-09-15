@@ -16,7 +16,7 @@ jobs:
 
       - uses: actions/setup-node@v3
         with:
-          node-version-file: typescript-todo-list/.nvmrc
+          node-version-file: .nvmrc
           registry-url: 'https://repo.bazaarvoice.com/nexus/content/repositories/npm-all'
           
       - name: Install NPM Dependencies
