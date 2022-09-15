@@ -20,7 +20,6 @@ jobs:
           registry-url: 'https://repo.bazaarvoice.com/nexus/content/repositories/npm-all'
           
       - name: Install NPM Dependencies
-        working-directory: typescript-todo-list
         run: |
           npm ci
       
